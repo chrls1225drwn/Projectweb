@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up / Sign In</title>
+    <link rel="stylesheet" href="log.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up / Sign In</h2>
+        <form id="signupForm">
+            <input type="email" id="email" name="email" placeholder="Email Address" required pattern="[a-z0-9._%+-]+@gmail\.com$" title="Please enter a valid Gmail address">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must be at least 8 characters long and include a number, an uppercase letter, and a lowercase letter">
+            <input type="submit" value="Submit">
+        </form>
+        <script>
+            document.getElementById('signupForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                window.location.href = 'cred.html';
+            });
+        </script>
+    </div>
+</body>
+</html>
